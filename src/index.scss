@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+  font-family: "Roboto", sans-serif;
+  src: url("../public/fonts/Roboto-Black.ttf");
+}
+$--tw-bg-opacity: 1;
+$--tw-text-opacity: 1;
+body {
+  margin: 0;
+  background-color: rgb(28 28 30 / $--tw-bg-opacity);
+  color: rgb(152 152 152 / $--tw-text-opacity);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
