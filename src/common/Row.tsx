@@ -16,6 +16,7 @@ import { Navigation } from "swiper";
 
 const Row = ({
   Reguest,
+  sidebar,
   title,
   girdRow,
 }: {
@@ -23,19 +24,18 @@ const Row = ({
   title: string;
   poster?: boolean;
   girdRow?: boolean;
+  sidebar?: boolean;
 }) => {
   const prefixs = "https://image.tmdb.org/t/p/original";
   const { movies } = useFetchMovies(Reguest);
 
-  const dispatch = useAppDispatch();
-
   let flex: string = "flex  m-auto  items-center px-6";
   let grid: string =
-    "grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 items-center justify-center justify-items-center ";
+    "grid  grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4  justify-center justify-items-center ";
 
   return (
     <>
-      <h1 className="text-[2rem] ml-2 font-Roboto">{title}</h1>
+      <h1 className="text-[2rem] ml-8 mb-2 mt-9 font-Roboto">{title}</h1>
 
       <div className={!girdRow ? flex : grid}>
         {!girdRow ? (
@@ -43,8 +43,9 @@ const Row = ({
             <Swiper
               navigation={true}
               slidesPerView={4}
-              spaceBetween={20}
+              spaceBetween={10}
               modules={[Navigation]}
+              className="p-5"
               breakpoints={{
                 500: {
                   slidesPerView: 1,
@@ -70,7 +71,11 @@ const Row = ({
             >
               {movies.map((m: any) => (
                 <SwiperSlide>
-                  <Link to={`/movie/${m.id}`} key={m.id}>
+                  <Link
+                    to={`/movie/${m.id}`}
+                    key={m.id}
+                    className="opacity-[0.8] hover:opacity-[1] duration-300 transition-all"
+                  >
                     <div className="relative overflow-hidden md:hover:scale-105 p-2 delay-300 transition-all ">
                       <span className="flex items-center gap-2 bg-red-600 text-white text-[1rem] px-3 absolute top-3 right-5 rounded-[100px]">
                         {m?.vote_average}
@@ -94,7 +99,11 @@ const Row = ({
         ) : (
           <>
             {movies.map((m: any) => (
-              <Link to={`/movie/${m.id}`} key={m.id}>
+              <Link
+                to={`/movie/${m.id}`}
+                key={m.id}
+                className="opacity-[0.8] hover:opacity-[1] duration-300 transition-all"
+              >
                 <div className="relative overflow-hidden md:hover:scale-105 p-2 delay-300 transition-all ">
                   <span className="flex items-center gap-2 bg-red-600 text-white text-[1rem] px-3 absolute top-3 right-5 rounded-[100px]">
                     {m?.vote_average}

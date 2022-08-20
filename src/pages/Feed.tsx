@@ -18,7 +18,7 @@ type Props = {};
 const Feed = (props: Props) => {
   return (
     <>
-      <div className="flex  justify-center">
+      <div className="flex justify-center mt-[100px]">
         <div className="flex flex-col w-[80%]">
           <Routes>
             <Route path="moviselist" element={<Movies />} />

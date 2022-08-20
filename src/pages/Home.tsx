@@ -16,15 +16,12 @@ const Home: FC = () => {
   return (
     <>
       <Herosection />
-      <div className="flex  justify-center">
-        <div className="w-[70rem]">
-          <Row Reguest={Request.Home} title="OrignialNetflix" />
+      <div className="flex justify-center pt-2">
+        <div className="w-[72%]">
+          <Row Reguest={Request.Home} title="OrignialMovies" />
           <Row Reguest={Request.Comedy} title="Comedy" />
-          <Row Reguest={Request.Action} title="Action" />
+          <Row Reguest={Request.Action} title="Action" sidebar />
           <Row Reguest={Request.Fantasy} title="Fantasy" />
-          <Row Reguest={Request.History} title="History" />
-          <Row Reguest={Request.War} title="War" />
-          <Row Reguest={Request.Horror} title="Horror" />
         </div>
         <Sidebar />
       </div>

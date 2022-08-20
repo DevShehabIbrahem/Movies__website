@@ -6,11 +6,9 @@ const useRandomBanner = () => {
   const [banner, setBanner] = useState<any>([]);
   useEffect(() => {
     async function RandomBanner() {
-      const res = await baseURL.get(`${Request.origienals}`);
+      const { data } = await baseURL.get(`${Request.origienals}`);
       setBanner(
-        res?.data.results[
-          Math.floor(Math.random() * res.data.results.length - 1)
-        ]
+        data?.results[Math.floor(Math.random() * data.results.length - 1)]
       );
     }
 
