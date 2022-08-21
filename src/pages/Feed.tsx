@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { Component } from "react";
 import { Route, Routes } from "react-router-dom";
 
 import {
@@ -10,9 +10,9 @@ import {
   Tvmovies,
 } from "../pages";
 
-const Feed: FC = () => {
-  return (
-    <>
+export default class Feed extends Component {
+  render() {
+    return (
       <div className="flex justify-center mt-[68px]">
         <div className="flex flex-col w-full md:w-[80%] mb-10">
           <Routes>
@@ -25,8 +25,6 @@ const Feed: FC = () => {
         </div>
         <Sidebar />
       </div>
-    </>
-  );
-};
-
-export default Feed;
+    );
+  }
+}

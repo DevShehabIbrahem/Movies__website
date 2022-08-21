@@ -1,13 +1,10 @@
-import { FC } from "react";
 import Row from "../common/Row";
 import Request from "../API/Requests ";
 
-const Movies: FC = () => {
-  return (
-    <>
-      <Row Reguest={Request.Adventure} title="Tvmovies" girdRow />
-    </>
-  );
-};
+import React, { Component } from "react";
 
-export default Movies;
+export default class Movies extends Component {
+  render() {
+    return <Row Reguest={Request.Adventure} title="Tvmovies" girdRow />;
+  }
+}

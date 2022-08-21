@@ -8,7 +8,6 @@ import {
 } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAppDispatch } from "../Redux/hook";
-import { MenuChange } from "../Redux/Reducers/CloseMenu";
 import { Fetchgenres } from "../Redux/Reducers/Genres";
 import { fetchGenres } from "./utitly";
 
