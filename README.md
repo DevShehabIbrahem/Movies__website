@@ -16,7 +16,10 @@ The Movie Database API
 - Redux-Toolkit
 - Axios
 - Swiper
-- React-Circular-Progressbar,React-Icons, React-Router-Dom
+- React-Icons
+- React-Router-Dom
+- Hooks And Class Component
+- Scss
 
 ## Features
 
