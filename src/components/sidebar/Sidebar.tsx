@@ -1,13 +1,12 @@
 import axios from "axios";
-import React, { ChangeEvent, useEffect, useState } from "react";
-import { AiFillStar } from "react-icons/ai";
+import { ChangeEvent, useEffect, useState } from "react";
 import { IoIosSearch } from "react-icons/io";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Request from "../../API/Requests ";
 import RowSidebar from "../../common/RowSidebar";
 import { fetchGenres } from "../../common/utitly";
 import { useAppDispatch } from "../../Redux/hook";
-import { Fetchgenres, selectStatus } from "../../Redux/Reducers/Genres";
+import { Fetchgenres } from "../../Redux/Reducers/Genres";
 import { SearchMovies } from "../../Redux/Reducers/SearchSlice";
 
 const Sidebar = () => {
@@ -66,7 +65,7 @@ const Sidebar = () => {
             ))}
           </select>
 
-          <div className="flex flex-col">
+          <div className="flex flex-col mb-11">
             <RowSidebar Reguest={Request.Action} title="Trinding" />
             <RowSidebar Reguest={Request.Horror} title="popular" />
             <RowSidebar Reguest={Request.Adventure} title="Tv Shows" />

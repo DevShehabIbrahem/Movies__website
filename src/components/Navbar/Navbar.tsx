@@ -1,11 +1,13 @@
-import { useState, FC, ChangeEvent, useEffect, MouseEventHandler } from "react";
-import { Link, NavLink, useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Link, NavLink } from "react-router-dom";
 import logo from "../../assets/logo.png";
 import user from "../../assets/userProfile.png";
+
 import MobileMenu from "../mobileMenu/MobileMenu";
 import { AiOutlineMenu } from "react-icons/ai";
 import { words } from "../../common/words";
 import { IoIosNotifications } from "react-icons/io";
+
 import {
   isActiveStyle,
   isNotActiveStyle,

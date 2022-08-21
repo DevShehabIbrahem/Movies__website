@@ -21,7 +21,7 @@ const Search = () => {
 
   return (
     <>
-      <div className="flex mx-auto  gap-2 w-96  duration-300 p-2 rounded-[100px] bg-gray-300 drop-shadow-md hover:bg-gray-200 ">
+      <div className="flex mx-auto  gap-2 w-80 md:w-96  duration-300 p-2 rounded-[100px] bg-gray-300 drop-shadow-md hover:bg-gray-200 ">
         <span
           className="text-red-500 text-[20] md:text-[30px] hover:cursor-pointer "
           onClick={handleSearch}

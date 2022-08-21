@@ -58,6 +58,7 @@ module.exports = {
         secondaryColor: "#F0F0F0",
         blackOverlay: "rgba(0, 0 ,0 ,0.7)",
         fadebg: "linear-gradient(180deg,transparent,rgba(37,37,37,0.61),#111)",
+        footer: "#333335",
       },
 
       keyframes: {

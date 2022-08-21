@@ -1,14 +1,14 @@
-import useFetchMovies from "../hooks/useFetchMovies";
 import { Link } from "react-router-dom";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import "swiper/css";
-import "swiper/css/navigation";
+import useFetchMovies from "../hooks/useFetchMovies";
 import { AiFillStar } from "react-icons/ai";
-
 import { Navigation } from "swiper";
 import { flex, grid, prefixs } from "./styles";
+
+import "swiper/css";
+import "swiper/css/navigation";
 
 const Row = ({
   Reguest,
@@ -91,6 +91,7 @@ const Row = ({
               <Link
                 to={`/movie/${m.id}`}
                 className="opacity-[0.8] hover:opacity-[1] duration-300 transition-all"
+                key={m?.id}
               >
                 <div className="relative overflow-hidden md:hover:scale-105 p-2 delay-300 transition-all ">
                   <span className="flex items-center gap-2 bg-red-600 text-white text-[1rem] px-3 absolute top-3 right-5 rounded-[100px]">
