@@ -42,8 +42,10 @@ The Movie Database API
 
 ![Screenshot 5](https://i.ibb.co/SJk8cRY/screencapture-localhost-3000-movie-559-2022-08-21-02-04-49.png)
 
-![Screenshot 5](https://i.ibb.co/q7PzQ69/sec5.png)
+![Screenshot 6](https://i.ibb.co/q7PzQ69/sec5.png)
 
-![Screenshot 6](https://i.ibb.co/SJKd7q7/sec6.png)
+![Screenshot 7](https://i.ibb.co/GJ1K454/dec9.png)
 
-![Screenshot 7](https://i.ibb.co/Czn9S1G/sec7.png)
+![Screenshot 8](https://i.ibb.co/SJKd7q7/sec6.png)
+
+![Screenshot 9](https://i.ibb.co/Czn9S1G/sec7.png)
