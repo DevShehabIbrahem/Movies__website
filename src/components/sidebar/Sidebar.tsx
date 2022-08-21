@@ -4,45 +4,35 @@ import { AiFillStar } from "react-icons/ai";
 import { IoIosSearch } from "react-icons/io";
 import { Link, useNavigate } from "react-router-dom";
 import Request from "../../API/Requests ";
-import Row from "../../common/Row";
 import RowSidebar from "../../common/RowSidebar";
-import useRandomTrinding from "../../hooks/useRandomTrinding";
+import { fetchGenres } from "../../common/utitly";
 import { useAppDispatch } from "../../Redux/hook";
 import { Fetchgenres, selectStatus } from "../../Redux/Reducers/Genres";
-import { SearchMovies, SearchState } from "../../Redux/Reducers/SearchSlice";
-import { useTypedSelector } from "../../Redux/store";
+import { SearchMovies } from "../../Redux/Reducers/SearchSlice";
 
-type Props = {};
-
-const Sidebar = (props: Props) => {
+const Sidebar = () => {
   const [genres, setGenres] = useState<[]>([]);
   const [term, setTerm] = useState<string>("");
 
-  const state = useTypedSelector(selectStatus);
   const dispatch = useAppDispatch();
   const Navigate = useNavigate();
   const [genresnum, setGenresnum] = useState<any>();
-  const prefixs = "https://image.tmdb.org/t/p/original";
 
   const handleSearch = () => {
     dispatch(SearchMovies(term));
     if (term) Navigate("/search");
   };
+
   const handelChange = (e: ChangeEvent<HTMLSelectElement>) => {
     setGenresnum(e.target.value);
     Navigate(`/Genres/${genresnum}`);
   };
-  const fetchGenres = async () => {
-    const { data } = await axios.get(
-      `https://api.themoviedb.org/3/genre/movie/list?api_key=e99375d6ca88c9406621028a59f9ddfe&language=en-US`
-    );
-    setGenres(data.genres);
-  };
 
   useEffect(() => {
-    fetchGenres();
+    fetchGenres(setGenres);
     dispatch(Fetchgenres(genresnum));
   }, [genresnum]);
+
   return (
     <div className="hidden lg:flex lg:w-[23rem] h-auto border-l-2 border-[#ccc] px-5">
       <div className="px-[1rem]">
@@ -54,6 +44,7 @@ const Sidebar = (props: Props) => {
             >
               <IoIosSearch />
             </span>
+
             <input
               type="text"
               onChange={(e) => setTerm(e.target.value)}
@@ -75,7 +66,7 @@ const Sidebar = (props: Props) => {
             ))}
           </select>
 
-          <div className="flex flex-col ">
+          <div className="flex flex-col">
             <RowSidebar Reguest={Request.Action} title="Trinding" />
             <RowSidebar Reguest={Request.Horror} title="popular" />
             <RowSidebar Reguest={Request.Adventure} title="Tv Shows" />

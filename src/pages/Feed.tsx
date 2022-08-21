@@ -1,21 +1,15 @@
-import React from "react";
-import { Outlet, Route, Routes } from "react-router-dom";
-import Request from "../API/Requests ";
-import Row from "../common/Row";
-import GenresMovies from "../components/Genres/GenresMovies";
-import Herosection from "../components/Herosection/Herosection";
+import { FC } from "react";
+import { Route, Routes } from "react-router-dom";
+
 import Sidebar from "../components/sidebar/Sidebar";
 import Genres from "./Genres";
 
-import Home from "./Home";
 import Movies from "./Movies";
 import MoviesDetails from "./MoviesDetails";
 import Search from "./Search";
 import Tvmovies from "./Tvmovies";
 
-type Props = {};
-
-const Feed = (props: Props) => {
+const Feed: FC = () => {
   return (
     <>
       <div className="flex justify-center mt-[100px]">

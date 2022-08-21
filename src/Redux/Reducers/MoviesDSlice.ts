@@ -6,7 +6,7 @@ export const FetchMoviesDetails = createAsyncThunk<MoviesT[], any>(
   "movie/SearchSlice",
   async (id: number) => {
     const res = await fetch(
-      `https://api.themoviedb.org/3/movie/${id}?api_key=e99375d6ca88c9406621028a59f9ddfe&language=en-US`
+      `https://api.themoviedb.org/3/movie/${id}?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`
     );
     const data: MoviesT[] = await res.json();
     return data;

@@ -1,4 +1,4 @@
-import { ChangeEvent, useEffect, useState } from "react";
+import { useState } from "react";
 
 import { useTypedSelector } from "../Redux/store";
 
@@ -7,14 +7,9 @@ import { SearchMovies, SearchState } from "../Redux/Reducers/SearchSlice";
 import { Link } from "react-router-dom";
 import { IoIosSearch } from "react-icons/io";
 import { AiFillStar } from "react-icons/ai";
-import { Fetchgenres } from "../Redux/Reducers/Genres";
-
-let grid: string =
-  "grid  grid-cols-1 px-6 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4  justify-center justify-items-center ";
+import { grid, prefixs } from "../common/styles";
 
 const Search = () => {
-  const prefixs = "https://image.tmdb.org/t/p/original";
-
   const [term, setTerm] = useState<string>("");
 
   const state = useTypedSelector(SearchState);
@@ -33,6 +28,7 @@ const Search = () => {
         >
           <IoIosSearch className=" text-[2rem]" />
         </span>
+
         <input
           type="text"
           onChange={(e) => setTerm(e.target.value)}
@@ -41,9 +37,11 @@ const Search = () => {
           placeholder="Search"
         />
       </div>
+
       <h1 className="text-center text-[1.5rem] py-5 font-bold">
         {`Search results ${state.results?.length || 0}`}
       </h1>
+
       {/* result */}
       <div className={grid}>
         {state.results?.map((m: any) => (
@@ -63,6 +61,7 @@ const Search = () => {
                 alt="Movie"
                 className="rounded-2xl border-2 border-red-200 "
               />
+
               <span className="text-[1.2rem] text-center pt-2 flex items-center justify-center font-bold">
                 {m?.original_title}
               </span>

@@ -1,5 +1,5 @@
 import { Dispatch, SetStateAction } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { isActiveStyle, isNotActiveStyle } from "../../common/styles";
 import { words } from "../../common/words";
 const NavLinks = ({

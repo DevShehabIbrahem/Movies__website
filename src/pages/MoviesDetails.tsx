@@ -9,15 +9,13 @@ import {
 
 import { useTypedSelector } from "../Redux/store";
 import { useAppDispatch } from "../Redux/hook";
+import { prefixs } from "../common/styles";
 
 const MoviesDetails: FC = () => {
   const { id } = useParams();
 
   const dispatch = useAppDispatch();
   const MoviesDetails = useTypedSelector(selectStatus);
-  console.log(MoviesDetails);
-
-  const prefixs = "https://image.tmdb.org/t/p/original";
 
   useEffect(() => {
     dispatch(FetchMoviesDetails(id));
@@ -70,6 +68,7 @@ const MoviesDetails: FC = () => {
           />
         </div>
       </div>
+
       {/* Details */}
       <div className="div_style text-[1.5rem] mt-11 px-5 md:px-0 md:ml-12 max-w-2xl gap-5">
         <div>

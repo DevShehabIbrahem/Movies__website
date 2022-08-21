@@ -1,19 +1,11 @@
-import { useEffect } from "react";
-import useFetchMovies from "../hooks/useFetchMovies";
-import { Link } from "react-router-dom";
-
-import { useTypedSelector } from "../Redux/store";
-
-import { useAppDispatch } from "../Redux/hook";
-import { selectStatus } from "../Redux/Reducers/Genres";
-import { Swiper, SwiperSlide } from "swiper/react";
-
 import "swiper/css";
 import "swiper/css/navigation";
+import { Link } from "react-router-dom";
+
 import { AiFillStar } from "react-icons/ai";
 
-import { Navigation } from "swiper";
 import useRandomTrinding from "../hooks/useRandomTrinding";
+import { prefixs } from "./styles";
 
 const RowSidebar = ({
   Reguest,
@@ -22,7 +14,6 @@ const RowSidebar = ({
   Reguest: string | any;
   title: string;
 }) => {
-  const prefixs = "https://image.tmdb.org/t/p/original";
   const { trinding } = useRandomTrinding(Reguest);
 
   return (

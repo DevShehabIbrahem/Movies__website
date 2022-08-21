@@ -11,8 +11,14 @@ const isNotBlack: string = "pt-[76px] text-[#757575] text-[13px]";
 
 const navChanged: string =
   "bg-black fixed w-full top-0 transition-all ease-in flex justify-between items-center px-5 py-1 z-20 ";
+
 const navNoChange: string =
   "bg-transparent fixed w-full top-0 pb-5 transition-all ease-in flex justify-between items-center px-5 py-1 z-20 ";
+
+const prefixs: string = "https://image.tmdb.org/t/p/original";
+const flex: string = "flex  m-auto  items-center px-6";
+const grid: string =
+  "grid  grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4  justify-center justify-items-center ";
 
 export {
   navChanged,
@@ -21,4 +27,7 @@ export {
   BlackStyle,
   isNotActiveStyle,
   isActiveStyle,
+  prefixs,
+  flex,
+  grid,
 };

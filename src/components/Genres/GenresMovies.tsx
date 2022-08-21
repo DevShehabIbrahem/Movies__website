@@ -1,18 +1,11 @@
-import React from "react";
 import { AiFillStar } from "react-icons/ai";
 import { Link } from "react-router-dom";
+import { grid, prefixs } from "../../common/styles";
 import { selectStatus } from "../../Redux/Reducers/Genres";
 import { useTypedSelector } from "../../Redux/store";
 
-type Props = {};
-
-const GenresMovies = (props: Props) => {
+const GenresMovies = () => {
   const state = useTypedSelector(selectStatus);
-  console.log(state);
-
-  let grid: string =
-    "grid  grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4  justify-center justify-items-center ";
-  const prefixs = "https://image.tmdb.org/t/p/original";
 
   return (
     <div>

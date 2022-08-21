@@ -6,7 +6,7 @@ export const SearchMovies = createAsyncThunk<MoviesT[], any>(
   "search/SearchSlice",
   async (term: string) => {
     const res = await fetch(
-      `https://api.themoviedb.org/3/search/movie?api_key=e99375d6ca88c9406621028a59f9ddfe&language=en-US&include_adult=false&query=${term}`
+      `https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&include_adult=false&query=${term}`
     );
     const data: MoviesT[] = await res.json();
     return data;

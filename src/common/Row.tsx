@@ -1,11 +1,6 @@
-import { useEffect } from "react";
 import useFetchMovies from "../hooks/useFetchMovies";
 import { Link } from "react-router-dom";
 
-import { useTypedSelector } from "../Redux/store";
-
-import { useAppDispatch } from "../Redux/hook";
-import { selectStatus } from "../Redux/Reducers/Genres";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
@@ -13,6 +8,7 @@ import "swiper/css/navigation";
 import { AiFillStar } from "react-icons/ai";
 
 import { Navigation } from "swiper";
+import { flex, grid, prefixs } from "./styles";
 
 const Row = ({
   Reguest,
@@ -26,13 +22,30 @@ const Row = ({
   girdRow?: boolean;
   sidebar?: boolean;
 }) => {
-  const prefixs = "https://image.tmdb.org/t/p/original";
   const { movies } = useFetchMovies(Reguest);
 
-  let flex: string = "flex  m-auto  items-center px-6";
-  let grid: string =
-    "grid  grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4  justify-center justify-items-center ";
-
+  const breakpoints = {
+    350: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+    },
+    650: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 40,
+    },
+    1100: {
+      slidesPerView: 4,
+      spaceBetween: 50,
+    },
+    1200: {
+      slidesPerView: 4,
+      spaceBetween: 50,
+    },
+  };
   return (
     <>
       <h1 className="text-[2rem] ml-8 mb-2 mt-9 font-Roboto">{title}</h1>
@@ -46,28 +59,7 @@ const Row = ({
               spaceBetween={10}
               modules={[Navigation]}
               className="p-5"
-              breakpoints={{
-                350: {
-                  slidesPerView: 1,
-                  spaceBetween: 20,
-                },
-                650: {
-                  slidesPerView: 2,
-                  spaceBetween: 20,
-                },
-                768: {
-                  slidesPerView: 3,
-                  spaceBetween: 40,
-                },
-                1100: {
-                  slidesPerView: 4,
-                  spaceBetween: 50,
-                },
-                1200: {
-                  slidesPerView: 4,
-                  spaceBetween: 50,
-                },
-              }}
+              breakpoints={breakpoints}
             >
               {movies.map((m: any) => (
                 <SwiperSlide>

@@ -1,12 +1,9 @@
+import usecutWords from "../../hooks/usecutWords";
 import useRandomBanner from "../../hooks/useRandomBanner";
-
 const Herosection = () => {
   const { banner } = useRandomBanner();
+  const { CutWords } = usecutWords(banner);
 
-  let CutWords =
-    banner?.overview?.length > 100
-      ? banner?.overview.slice(0, 100) + ",..."
-      : banner?.overview;
   return (
     <div
       className="text-white object-contain h-[590px] overflow-hidden"
@@ -32,7 +29,7 @@ const Herosection = () => {
           </button>
         </div>
 
-        <h1 className=" w-[20rem] md:w-[45rem] leading-[1.6] text-[1.1rem] font-bold pt-[1rem] max-w-[360px] h-[80px]">
+        <h1 className="w-[20rem] md:w-[45rem] leading-[1.6] text-[1.1rem] font-bold pt-[1rem] max-w-[360px] h-[80px]">
           {CutWords}
         </h1>
       </div>

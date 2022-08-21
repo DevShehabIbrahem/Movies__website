@@ -1,16 +1,10 @@
-import { FC, useEffect, useState } from "react";
+import { FC } from "react";
 
 import Herosection from "../components/Herosection/Herosection";
 
 import Row from "../common/Row";
 import Request from "../API/Requests ";
-import { Outlet, Route, Routes } from "react-router-dom";
-import Search from "./Search";
-import GenresMovies from "../components/Genres/GenresMovies";
 import Sidebar from "../components/sidebar/Sidebar";
-import Movies from "./Movies";
-import Feed from "./Feed";
-import Genres from "./Genres";
 
 const Home: FC = () => {
   return (

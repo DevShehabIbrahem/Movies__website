@@ -6,7 +6,7 @@ export const Fetchgenres = createAsyncThunk<MoviesT[], any>(
   "Genres/Fetchgenres",
   async (id: number) => {
     const res = await fetch(
-      `https://api.themoviedb.org/3/discover/movie?api_key=e99375d6ca88c9406621028a59f9ddfe&with_genres=${id}`
+      `https://api.themoviedb.org/3/discover/movie?api_key=${process.env.REACT_APP_API_KEY}&with_genres=${id}`
     );
     const data: any = await res.json();
     return data.results;

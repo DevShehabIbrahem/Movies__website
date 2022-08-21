@@ -2,21 +2,21 @@ import { useState, FC, ChangeEvent, useEffect, MouseEventHandler } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import logo from "../../assets/logo.png";
 import user from "../../assets/userProfile.png";
-
-import { IoIosNotifications, IoIosSearch } from "react-icons/io";
+import MobileMenu from "../mobileMenu/MobileMenu";
+import { AiOutlineMenu } from "react-icons/ai";
+import { words } from "../../common/words";
+import { IoIosNotifications } from "react-icons/io";
 import {
   isActiveStyle,
   isNotActiveStyle,
   navChanged,
   navNoChange,
 } from "../../common/styles";
-import MobileMenu from "../mobileMenu/MobileMenu";
-import { AiOutlineMenu } from "react-icons/ai";
-import { words } from "../../common/words";
 
 const Navbar = () => {
   const [navChange, setNavChange] = useState<boolean>(false);
   const [menu, setMenu] = useState<boolean>(false);
+
   const NavbarChange = () => {
     if (window.scrollY >= 300) {
       setNavChange(true);
@@ -37,7 +37,7 @@ const Navbar = () => {
           <img src={logo} alt="logo" className="w-[60px] mr-4" />
         </Link>
 
-        <div className="hidden  md:flex items-center text-white space-x-4 font-semibold">
+        <div className="hidden md:flex items-center text-white space-x-4 font-semibold">
           {words.navlink.map((n) => (
             <NavLink
               to={`${n}`}
