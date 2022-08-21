@@ -13,7 +13,7 @@ import {
 const Feed: FC = () => {
   return (
     <>
-      <div className="flex justify-center mt-[100px]">
+      <div className="flex justify-center mt-[68px]">
         <div className="flex flex-col w-full md:w-[80%] mb-10">
           <Routes>
             <Route path="Movies" element={<Movies />} />
