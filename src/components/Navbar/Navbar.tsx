@@ -44,6 +44,7 @@ const Navbar = () => {
               className={({ isActive }) =>
                 isActive ? isActiveStyle : isNotActiveStyle
               }
+              key={n}
             >
               {n}
             </NavLink>
