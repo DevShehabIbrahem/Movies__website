@@ -4,33 +4,21 @@ import { IoIosSearch } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
 import Request from "../../API/Requests ";
 import RowSidebar from "../../common/RowSidebar";
-import { fetchGenres } from "../../common/utitly";
 import { useAppDispatch } from "../../Redux/hook";
-import { Fetchgenres } from "../../Redux/Reducers/Genres";
 import { SearchMovies } from "../../Redux/Reducers/SearchSlice";
+import Select from "../../common/Select";
 
 const Sidebar = () => {
-  const [genres, setGenres] = useState<[]>([]);
   const [term, setTerm] = useState<string>("");
 
   const dispatch = useAppDispatch();
   const Navigate = useNavigate();
-  const [genresnum, setGenresnum] = useState<any>();
 
+  // Handle search
   const handleSearch = () => {
     dispatch(SearchMovies(term));
     if (term) Navigate("/search");
   };
-
-  const handelChange = (e: ChangeEvent<HTMLSelectElement>) => {
-    setGenresnum(e.target.value);
-    Navigate(`/Genres/${genresnum}`);
-  };
-
-  useEffect(() => {
-    fetchGenres(setGenres);
-    dispatch(Fetchgenres(genresnum));
-  }, [genresnum]);
 
   return (
     <div className="hidden lg:flex lg:w-[23rem] h-auto border-l-2 border-[#ccc] px-5">
@@ -43,28 +31,16 @@ const Sidebar = () => {
             >
               <IoIosSearch />
             </span>
-
             <input
               type="text"
-              onChange={(e) => setTerm(e.target.value)}
               value={term}
-              className="w-60 py-1 outline-0 bg-transparent border-0 focus:outline-none  text-black"
               placeholder="Search"
+              onChange={(e) => setTerm(e.target.value)}
+              className="w-60 py-1 outline-0 bg-transparent border-0 focus:outline-none  text-black"
             />
           </div>
-
-          <select
-            onChange={handelChange}
-            className="w-60 rounded-md drop-shadow-md bg-gray-300 
-            hover:bg-gray-200  outline text-black p-2 text-[1rem]"
-          >
-            {genres.map((item: any) => (
-              <option value={item.id} key={item.id} className="font-bold">
-                {item.name}
-              </option>
-            ))}
-          </select>
-
+          {/* Select Type  */}
+          <Select />
           <div className="flex flex-col mb-11">
             <RowSidebar Reguest={Request.Action} title="Trinding" />
             <RowSidebar Reguest={Request.Horror} title="popular" />

@@ -1,37 +1,40 @@
 import { Dispatch, SetStateAction } from "react";
 import { NavLink } from "react-router-dom";
+import Select from "../../common/Select";
 import { isActiveStyle, isNotActiveStyle } from "../../common/styles";
 import { words } from "../../common/words";
-const NavLinks = ({
-  setMenu,
-}: {
-  setMenu: Dispatch<SetStateAction<boolean>>;
-}) => (
-  <ul>
-    <li>
-      <NavLink
-        to="/"
-        className={({ isActive }) =>
-          isActive ? isActiveStyle : isNotActiveStyle
-        }
-        onClick={() => setMenu(false)}
-      >
-        Home
-      </NavLink>
-    </li>
-    {words.navlinkMobile.map((n) => (
-      <li key={n} onClick={() => setMenu(false)}>
+import { useAppDispatch } from "../../Redux/hook";
+import { MenuChange } from "../../Redux/Reducers/CloseMenu";
+const NavLinks = () => {
+  const dispatch = useAppDispatch();
+  return (
+    <ul>
+      <li>
         <NavLink
-          to={`${n}`}
+          to="/"
           className={({ isActive }) =>
             isActive ? isActiveStyle : isNotActiveStyle
           }
+          onClick={() => dispatch(MenuChange(false))}
         >
-          {n}
+          Home
         </NavLink>
       </li>
-    ))}
-  </ul>
-);
+      {words.navlinkMobile.map((n) => (
+        <li key={n} onClick={() => dispatch(MenuChange(false))}>
+          <NavLink
+            to={`${n}`}
+            className={({ isActive }) =>
+              isActive ? isActiveStyle : isNotActiveStyle
+            }
+          >
+            {n}
+          </NavLink>
+        </li>
+      ))}
+      <Select />
+    </ul>
+  );
+};
 
 export default NavLinks;

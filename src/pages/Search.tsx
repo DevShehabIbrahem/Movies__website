@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 import { IoIosSearch } from "react-icons/io";
 import { AiFillStar } from "react-icons/ai";
 import { grid, prefixs } from "../common/styles";
+import Select from "../common/Select";
 
 const Search = () => {
   const [term, setTerm] = useState<string>("");
@@ -37,7 +38,6 @@ const Search = () => {
           placeholder="Search"
         />
       </div>
-
       <h1 className="text-center text-[1.5rem] py-5 font-bold">
         {`Search results ${state.results?.length || 0}`}
       </h1>

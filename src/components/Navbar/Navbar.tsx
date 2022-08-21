@@ -14,10 +14,14 @@ import {
   navChanged,
   navNoChange,
 } from "../../common/styles";
+import CloseMenu, { closeM, MenuChange } from "../../Redux/Reducers/CloseMenu";
+import { useTypedSelector } from "../../Redux/store";
+import { useAppDispatch } from "../../Redux/hook";
 
 const Navbar = () => {
+  const dispatch = useAppDispatch();
+  const state = useTypedSelector(closeM);
   const [navChange, setNavChange] = useState<boolean>(false);
-  const [menu, setMenu] = useState<boolean>(false);
 
   const NavbarChange = () => {
     if (window.scrollY >= 300) {
@@ -45,7 +49,7 @@ const Navbar = () => {
             className={({ isActive }) =>
               isActive ? isActiveStyle : isNotActiveStyle
             }
-            onClick={() => setMenu(false)}
+            onClick={() => dispatch(MenuChange(false))}
           >
             Home
           </NavLink>
@@ -70,11 +74,11 @@ const Navbar = () => {
       {/* Mobile-Menu */}
       <span
         className="flex text-[2rem] cursor-pointer text-white md:hidden"
-        onClick={() => setMenu(true)}
+        onClick={() => dispatch(MenuChange(true))}
       >
         <AiOutlineMenu />
       </span>
-      {menu && <MobileMenu setMenu={setMenu} />}
+      {state && <MobileMenu />}
     </div>
   );
 };

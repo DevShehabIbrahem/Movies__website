@@ -40,12 +40,6 @@ const MoviesDetails: FC = () => {
               MoviesDetails?.name ||
               MoviesDetails?.original_name}
           </h1>
-
-          <div>
-            <button className="bg-[#171717] hover:bg-[#262626] mr-2 px-5 py-[0.5rem] transition-all ease-in rounded">
-              play
-            </button>
-          </div>
         </div>
 
         <div
@@ -62,14 +56,14 @@ const MoviesDetails: FC = () => {
         <div className="relative top-28 left-3 md:left-10 ">
           <img
             src={`${prefixs}${MoviesDetails?.poster_path}`}
-            alt=""
+            alt="poster"
             className="w-[12rem] z-50 rounded-2xl"
           />
         </div>
       </div>
 
       {/* Details */}
-      <div className="div_style text-[1.5rem] mt-11 px-5 md:px-0 md:ml-12 max-w-2xl gap-5">
+      <div className="div_style text-[1.5rem] mb-10 mt-11 px-5 md:px-0 md:ml-12 max-w-2xl gap-5">
         <div>
           <span className="title_span">Name</span>
           <span>{MoviesDetails?.title || MoviesDetails.original_title}</span>
