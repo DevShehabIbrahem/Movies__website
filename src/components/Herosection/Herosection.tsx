@@ -1,9 +1,14 @@
+import { useNavigate } from "react-router-dom";
 import usecutWords from "../../hooks/usecutWords";
 import useRandomBanner from "../../hooks/useRandomBanner";
 const Herosection = () => {
+  const Navigate = useNavigate();
   const { banner } = useRandomBanner();
   const { CutWords } = usecutWords(banner);
 
+  const Readmore = () => {
+    Navigate(`/movie/${banner?.id}`);
+  };
   return (
     <div
       className="text-white object-contain h-[590px] overflow-hidden"
@@ -21,10 +26,10 @@ const Herosection = () => {
         </h1>
 
         <div>
-          <button className="bg-[#171717] hover:bg-[#262626] mr-2 px-5 py-[0.5rem] transition-all ease-in rounded">
-            play
-          </button>
-          <button className="bg-[#171717] hover:bg-[#262626] mr-2 px-5 py-[0.5rem] transition-all ease-in rounded">
+          <button
+            className="bg-[#171717] hover:bg-[#262626] mr-2 px-5 py-[0.5rem] transition-all ease-in rounded"
+            onClick={Readmore}
+          >
             Read More
           </button>
         </div>

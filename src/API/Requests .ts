@@ -7,7 +7,7 @@ const Request = {
   Comedy: `discover/movie?api_key=${process.env.REACT_APP_API_KEY}&with_genres=35`,
   Action: `discover/movie?api_key=${process.env.REACT_APP_API_KEY}&with_genres=28`,
   Horror: `discover/movie?api_key=${process.env.REACT_APP_API_KEY}&with_genres=27`,
-  origienals: `discover/tv?api_key=${process.env.REACT_APP_API_KEY}&with_networks=213
+  origienals: `discover/movie?api_key=${process.env.REACT_APP_API_KEY}&with_networks=213
   `,
 };
 export default Request;

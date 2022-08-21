@@ -13,6 +13,7 @@ import { prefixs } from "../common/styles";
 
 const MoviesDetails: FC = () => {
   const { id } = useParams();
+  console.log(id);
 
   const dispatch = useAppDispatch();
   const MoviesDetails = useTypedSelector(selectStatus);

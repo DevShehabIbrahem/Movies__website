@@ -33,7 +33,7 @@ const Navbar = () => {
   return (
     <div className={`${navChange ? navChanged : navNoChange}`}>
       <div className="flex items-center justify-between gap-20">
-        <Link to="/">
+        <Link to="/Home">
           <img src={logo} alt="logo" className="w-[60px] mr-4" />
         </Link>
 
