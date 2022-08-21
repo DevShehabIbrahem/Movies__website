@@ -77,7 +77,8 @@ const Sidebar = (props: Props) => {
 
           <div className="flex flex-col ">
             <RowSidebar Reguest={Request.Action} title="Trinding" />
-            <RowSidebar Reguest={Request.Horror} title="populer" />
+            <RowSidebar Reguest={Request.Horror} title="popular" />
+            <RowSidebar Reguest={Request.Adventure} title="Tv Shows" />
           </div>
         </div>
       </div>

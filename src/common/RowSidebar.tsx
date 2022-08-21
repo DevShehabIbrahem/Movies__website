@@ -27,23 +27,20 @@ const RowSidebar = ({
 
   return (
     <>
-      <h3 className=" border-l-4 border-[#ccc] mb-2 mt-3 uppercase text-[1.3rem] font-bold">
+      <h3 className=" border-l-4 border-[#ccc] mb-2 mt-10 uppercase text-[1.3rem] font-bold">
         <p className="pl-1"> {title}</p>
       </h3>
-      <div className="flex justify-center items-center opacity-[0.8] hover:opacity-[1] duration-300 transition-all">
+      <div className="flex justify-center items-center opacity-[0.8] hover:opacity-[1] duration-300 transition-all ">
         <Link to={`/movie/${trinding?.id}`} key={trinding?.id} className="flex">
-          <div className=" overflow-hidden  p-2  ">
+          <div className=" overflow-hidden   mt-5 w-[50%]">
             <img
               src={`${prefixs}${trinding?.poster_path}`}
               alt="Movie"
-              className="rounded-2xl border-2 border-red-200 w-[10rem] "
+              className="rounded-2xl border-2 border-red-200 w-full  "
             />
-            <span className="text-[1.2rem] text-center pt-2 flex items-center justify-center font-bold">
-              {trinding?.original_title}
-            </span>
           </div>
 
-          <div className="flex flex-col items-center mt-5 ml-1 gap-[2rem]">
+          <div className="flex flex-col items-center mt-5 ml-1 gap-[2rem] w-[50%]">
             <span className="flex items-center gap-2 bg-red-600 text-white text-[1rem]  px-[9px] rounded-[100px]">
               {trinding?.vote_average}
               <AiFillStar />

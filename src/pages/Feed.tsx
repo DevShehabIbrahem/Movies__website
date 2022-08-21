@@ -19,10 +19,10 @@ const Feed = (props: Props) => {
   return (
     <>
       <div className="flex justify-center mt-[100px]">
-        <div className="flex flex-col w-[80%]">
+        <div className="flex flex-col w-full md:w-[80%]">
           <Routes>
-            <Route path="moviselist" element={<Movies />} />
-            <Route path="Tvmovies" element={<Tvmovies />} />
+            <Route path="Movies" element={<Movies />} />
+            <Route path="TvShow" element={<Tvmovies />} />
             <Route path="movie/:id" element={<MoviesDetails />} />
             <Route path="search" element={<Search />} />
             <Route path="/*" element={<Genres />} />

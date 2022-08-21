@@ -47,7 +47,7 @@ const Row = ({
               modules={[Navigation]}
               className="p-5"
               breakpoints={{
-                500: {
+                350: {
                   slidesPerView: 1,
                   spaceBetween: 20,
                 },

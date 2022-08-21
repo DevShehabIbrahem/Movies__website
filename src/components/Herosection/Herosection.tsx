@@ -18,7 +18,7 @@ const Herosection = () => {
         width: "100%",
       }}
     >
-      <div className="ml-[30px] pt-[140px] h-[190px] w-[38rem] relative z-10">
+      <div className=" ml-5 md:ml-[30px] pt-[12rem] md:pt-[140px] h-[190px] md:w-[38rem] relative z-10">
         <h1 className="text-[3rem] font-bold pb-[0.3rem]">
           {banner?.title || banner?.name || banner?.original_name}
         </h1>
@@ -32,7 +32,7 @@ const Herosection = () => {
           </button>
         </div>
 
-        <h1 className="w-[45rem] leading-[1.6] text-[1.1rem] font-bold pt-[1rem] max-w-[360px] h-[80px]">
+        <h1 className=" w-[20rem] md:w-[45rem] leading-[1.6] text-[1.1rem] font-bold pt-[1rem] max-w-[360px] h-[80px]">
           {CutWords}
         </h1>
       </div>
