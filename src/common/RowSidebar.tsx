@@ -7,6 +7,11 @@ import { AiFillStar } from "react-icons/ai";
 import useRandomTrinding from "../hooks/useRandomTrinding";
 import { prefixs } from "./styles";
 
+import { FC } from "react";
+
+interface data {
+  image?: HTMLImageElement;
+}
 const RowSidebar = ({
   Reguest,
   title,
