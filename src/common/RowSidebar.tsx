@@ -23,7 +23,7 @@ const RowSidebar = ({
       </h3>
       <div className="flex justify-center items-center opacity-[0.8] hover:opacity-[1] duration-300 transition-all ">
         <Link to={`/movie/${trinding?.id}`} key={trinding?.id} className="flex">
-          <div className=" overflow-hidden   mt-5 w-[50%]">
+          <div className=" overflow-hidden  mt-5 w-[50%]">
             <img
               src={`${prefixs}${trinding?.poster_path}`}
               alt="Movie"

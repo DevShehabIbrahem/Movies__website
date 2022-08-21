@@ -32,7 +32,6 @@ const MoviesDetails: FC = () => {
           backgroundPosition: "center center",
           position: "relative",
           width: "100%",
-          overflow: "hidden",
         }}
       >
         <div className="ml-[30px] pt-[80px] md:pt-[140px] h-[190px] md:w-[38rem] relative z-10">
@@ -60,11 +59,11 @@ const MoviesDetails: FC = () => {
               " linear-gradient(180deg,transparent,rgba(37,37,37,0.61),#111)",
           }}
         />
-        <div className="relative top-32 left-3 md:left-10">
+        <div className="relative top-28 left-3 md:left-10 ">
           <img
             src={`${prefixs}${MoviesDetails?.poster_path}`}
             alt=""
-            className="w-[12rem] z-50"
+            className="w-[12rem] z-50 rounded-2xl"
           />
         </div>
       </div>
