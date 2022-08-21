@@ -3,6 +3,6 @@ interface data {
   navlink: string[];
 }
 export const words: data = {
-  navlinkMobile: ["Home", "TvShow", "Movies", "Search"],
-  navlink: ["Home", "TvShow", "Movies", "Search"],
+  navlinkMobile: ["TvShow", "Movies", "Search"],
+  navlink: ["TvShow", "Movies", "Search"],
 };

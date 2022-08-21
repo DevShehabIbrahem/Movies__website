@@ -8,6 +8,17 @@ const NavLinks = ({
   setMenu: Dispatch<SetStateAction<boolean>>;
 }) => (
   <ul>
+    <li>
+      <NavLink
+        to="/"
+        className={({ isActive }) =>
+          isActive ? isActiveStyle : isNotActiveStyle
+        }
+        onClick={() => setMenu(false)}
+      >
+        Home
+      </NavLink>
+    </li>
     {words.navlinkMobile.map((n) => (
       <li key={n} onClick={() => setMenu(false)}>
         <NavLink

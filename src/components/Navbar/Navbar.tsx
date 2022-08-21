@@ -33,11 +33,20 @@ const Navbar = () => {
   return (
     <div className={`${navChange ? navChanged : navNoChange}`}>
       <div className="flex items-center justify-between gap-20">
-        <Link to="/Home">
+        <Link to="/">
           <img src={logo} alt="logo" className="w-[60px] mr-4" />
         </Link>
 
         <div className="hidden md:flex items-center text-white space-x-4 font-semibold">
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              isActive ? isActiveStyle : isNotActiveStyle
+            }
+            onClick={() => setMenu(false)}
+          >
+            Home
+          </NavLink>
           {words.navlink.map((n) => (
             <NavLink
               to={`${n}`}

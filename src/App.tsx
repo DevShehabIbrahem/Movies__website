@@ -11,7 +11,7 @@ const App: FC = () => {
     <>
       <Navbar />
       <Routes>
-        <Route path="/Home" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="/*" element={<Feed />} />
       </Routes>
 
