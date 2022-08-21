@@ -31,26 +31,14 @@ The Movie Database API
 
 ![Screenshot 1](https://i.ibb.co/RBmQKG6/sec1.png)
 
-![Screenshot 2](https://i.ibb.co/CB0694y/detail.png)
+![Screenshot 2](https://i.ibb.co/C11X3GK/sec2.png)
 
-![Screenshot 3](https://i.ibb.co/Vxf85Kh/watch.png)
+![Screenshot 3](https://i.ibb.co/y4Jhbhh/sec3.png)
 
-![Screenshot 4](https://i.ibb.co/B2yQtvZ/explore.png)
+![Screenshot 4](https://i.ibb.co/ScNntv0/sec4.png)
 
-![Screenshot 5](https://i.ibb.co/NY0kLHD/bookmark.png)
+![Screenshot 5](https://i.ibb.co/q7PzQ69/sec5.png)
 
-![Screenshot 6](https://i.ibb.co/P5pzbzf/search.png)
+![Screenshot 6](https://i.ibb.co/SJKd7q7/sec6.png)
 
-![Screenshot 7](https://i.ibb.co/kqc377t/profile.png)
-
-![Screenshot 8](https://i.ibb.co/HzWYzVB/comment.png)
-
-![Screenshot 9](https://i.ibb.co/5BhLp4x/auth.png)
-
-![Screenshot 10](https://i.ibb.co/LrYHgCF/mobile.png)
-
-## Start
-
-From July 19, 2022 to August 9, 2022
-
-### 👉 If you like this project, give it a star ✨ and share 👨🏻‍💻 it to your friends 👈
+![Screenshot 7](https://i.ibb.co/Czn9S1G/sec7.png)
