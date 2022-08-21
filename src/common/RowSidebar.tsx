@@ -31,7 +31,7 @@ const RowSidebar = ({
             />
           </div>
 
-          <div className="flex flex-col items-center mt-5 ml-1 gap-[2rem] w-[50%]">
+          <div className="flex flex-col justify-center items-center mt-5 ml-1 gap-[2rem] w-[50%]">
             <span className="flex items-center gap-2 bg-red-600 text-white text-[1rem]  px-[9px] rounded-[100px]">
               {trinding?.vote_average}
               <AiFillStar />
