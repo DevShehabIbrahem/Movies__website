@@ -11,6 +11,8 @@ import ErrorImg from "../../assets/Error.jpg";
 import "swiper/css";
 import "swiper/css/navigation";
 import MyImage from "./MyImage";
+import { useEffect, useState } from "react";
+import Loading from "./Loading/Loading";
 
 const Row = ({
   Reguest,
@@ -48,6 +50,7 @@ const Row = ({
       spaceBetween: 50,
     },
   };
+
   return (
     <>
       <h1 className="text-[2rem] ml-8 mb-2 mt-9 font-Roboto">{title}</h1>

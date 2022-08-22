@@ -1,15 +1,17 @@
-import { FC } from "react";
+import { FC, useEffect, useState } from "react";
 
 import Herosection from "../components/Herosection/Herosection";
 
 import Row from "../common/shared/Row";
 import Request from "../API/Requests ";
 import Sidebar from "../components/sidebar/Sidebar";
+import Loading from "../common/shared/Loading/Loading";
 
 const Home: FC = () => {
   return (
     <>
       <Herosection />
+
       <div className="flex justify-center pt-2">
         <div className="w-[72%]">
           <Row Reguest={Request.Home} title="Original Movies" />
