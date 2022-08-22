@@ -55,6 +55,7 @@ const MoviesDetails: FC = () => {
               " linear-gradient(180deg,transparent,rgba(37,37,37,0.61),#111)",
           }}
         />
+
         <div className="relative top-28 left-3 md:left-10 ">
           <img
             src={
@@ -69,7 +70,7 @@ const MoviesDetails: FC = () => {
       </div>
 
       {/* Details */}
-      <div className="div_style mb-[9rem] md:mb-0 text-[1.5rem]  mt-11 px-5 md:px-0 md:ml-12 max-w-2xl gap-5 ">
+      <div className="div_style mb-[9rem] md:mb-[5rem] text-[1.5rem]  mt-11 px-5 md:px-0 md:ml-12 max-w-2xl gap-5 ">
         <div>
           <span className="title_span">Name</span>
           <span>{MoviesDetails?.title || MoviesDetails.original_title}</span>
