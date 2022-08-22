@@ -8,9 +8,6 @@ import useRandomTrinding from "../hooks/useRandomTrinding";
 import { prefixs } from "./styles";
 import ErrorImg from "../assets/Error.jpg";
 
-interface data {
-  image?: HTMLImageElement;
-}
 const RowSidebar = ({
   Reguest,
   title,
