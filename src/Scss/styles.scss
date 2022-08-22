@@ -1,6 +1,11 @@
 .div_style {
     @apply flex flex-col leading-[3rem] gap-2 font-Roboto;
+
     .title_span {
-        @apply text-white text-[1.3rem] font-Roboto mr-5;
+        @apply text-white text-[1.7rem] font-Roboto mr-5 font-bold;
     }
+}
+
+.div_style div {
+    @apply flex gap-5 mb-5;
 }

@@ -6,11 +6,13 @@ import {
   FetchMoviesDetails,
   selectStatus,
 } from "../Redux/Reducers/MoviesDSlice";
-
 import { useTypedSelector } from "../Redux/store";
 import { useAppDispatch } from "../Redux/hook";
 import { prefixs } from "../common/styles";
 import Errorimage from "../assets/Error.jpg";
+import { CircularProgressbar } from "react-circular-progressbar";
+import "react-circular-progressbar/dist/styles.css";
+
 const MoviesDetails: FC = () => {
   const { id } = useParams();
 
@@ -77,9 +79,15 @@ const MoviesDetails: FC = () => {
           <span className="title_span div_style">Story</span>
           <span>{MoviesDetails?.overview} </span>
         </div>
-        <div>
+        <div className="flex items-center">
           <span className="title_span">Rate</span>
-          <span>{MoviesDetails?.vote_average} </span>
+          <span>
+            <CircularProgressbar
+              className="w-[7rem] h-[7rem] "
+              value={MoviesDetails?.vote_average}
+              text={MoviesDetails?.vote_average + "%"}
+            />
+          </span>
         </div>
         <div>
           <span className="title_span">date</span>
@@ -92,7 +100,7 @@ const MoviesDetails: FC = () => {
         <span className="flex flex-col items-start  md:flex-row gap-2 md:gap-5 ">
           <p className="title_span">Type</p>
           {MoviesDetails?.genres?.map(({ name }: { name: string }) => (
-            <p className="text-white text-[1rem] border border-red-500 px-[20px] rounded-[100px]">
+            <p className="text-white text-[1rem] border w-auto px-2 border-red-500 text-center rounded-[100px]">
               <p className="font-bold">{name}</p>
             </p>
           ))}
