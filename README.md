@@ -1,4 +1,4 @@
-# Movies App
+# Movies App 🎬
 
 TV Show / Movie Watching Website
 
