@@ -27,7 +27,7 @@ const MoviesDetails: FC = () => {
     <>
       {/* Banner */}
       <div
-        className="text-white object-contain h-[590px]"
+        className="overflow-hidden text-white object-contain h-[590px]"
         style={{
           backgroundSize: "cover",
           backgroundImage: `url("https://image.tmdb.org/t/p/original${MoviesDetails?.backdrop_path}")`,
@@ -69,7 +69,7 @@ const MoviesDetails: FC = () => {
       </div>
 
       {/* Details */}
-      <div className="div_style text-[1.5rem] mb-10 mt-11 px-5 md:px-0 md:ml-12 max-w-2xl gap-5">
+      <div className="div_style mb-[9rem] md:mb-0 text-[1.5rem]  mt-11 px-5 md:px-0 md:ml-12 max-w-2xl gap-5 ">
         <div>
           <span className="title_span">Name</span>
           <span>{MoviesDetails?.title || MoviesDetails.original_title}</span>
@@ -97,10 +97,10 @@ const MoviesDetails: FC = () => {
           <span className="title_span">language</span>
           <span>{MoviesDetails?.original_language} </span>
         </div>
-        <span className="flex flex-col items-start  md:flex-row gap-2 md:gap-5 ">
+        <span className="flex flex-wrap md:flex-nowrap items-start md:flex-row gap-2 md:gap-5">
           <p className="title_span">Type</p>
           {MoviesDetails?.genres?.map(({ name }: { name: string }) => (
-            <p className="text-white text-[1rem] border w-auto px-2 border-red-500 text-center rounded-[100px]">
+            <p className="text-white text-[0.8rem]  border w-auto px-2 border-red-500 text-center rounded-[100px]">
               <p className="font-bold">{name}</p>
             </p>
           ))}

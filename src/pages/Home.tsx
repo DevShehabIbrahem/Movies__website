@@ -12,7 +12,7 @@ const Home: FC = () => {
     <>
       <Herosection />
 
-      <div className="flex justify-center pt-2">
+      <div className="flex justify-center pt-2 mb-[9rem] md:mb-0">
         <div className="w-[72%]">
           <Row Reguest={Request.Home} title="Original Movies" />
           <Row Reguest={Request.Comedy} title="Comedy" />

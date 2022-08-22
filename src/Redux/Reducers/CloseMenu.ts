@@ -1,5 +1,4 @@
 import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { MoviesT } from "../../common/typed";
 import { RootState } from "../store";
 
 type MoveisType = {
@@ -7,11 +6,11 @@ type MoveisType = {
 };
 
 const initialState = {
-  closeMenuState: true,
+  closeMenuState: false,
 } as MoveisType;
 
 const CloseMenu = createSlice({
-  name: "Genres",
+  name: "ToggleMenu",
   initialState,
   reducers: {
     MenuChange: (state, { payload }) => {
