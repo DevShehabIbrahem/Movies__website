@@ -6,7 +6,7 @@ class Tvmovies extends Component {
   render() {
     return (
       <div>
-        <Row Reguest={Request.History} title="Tvmovies" poster girdRow />;
+        <Row Reguest={Request.History} title="Tv movies" poster girdRow />;
       </div>
     );
   }

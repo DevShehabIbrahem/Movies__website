@@ -39,11 +39,12 @@ const Sidebar = () => {
               className="w-60 py-1 outline-0 bg-transparent border-0 focus:outline-none  text-black"
             />
           </div>
+
           {/* Select Type  */}
           <Select />
           <div className="flex flex-col mb-11">
-            <RowSidebar Reguest={Request.Action} title="Trinding" />
-            <RowSidebar Reguest={Request.Horror} title="popular" />
+            <RowSidebar Reguest={Request.Action} title="Trending" />
+            <RowSidebar Reguest={Request.Horror} title="Most popular" />
             <RowSidebar Reguest={Request.Adventure} title="Tv Shows" />
           </div>
         </div>

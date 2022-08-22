@@ -8,8 +8,7 @@ import { Link } from "react-router-dom";
 import { IoIosSearch } from "react-icons/io";
 import { AiFillStar } from "react-icons/ai";
 import { grid, prefixs } from "../common/styles";
-import Select from "../common/Select";
-
+import ErrorImage from "../assets/Error.jpg";
 const Search = () => {
   const [term, setTerm] = useState<string>("");
 
@@ -57,7 +56,9 @@ const Search = () => {
               </span>
 
               <img
-                src={`${prefixs}${m?.poster_path}`}
+                src={
+                  m?.poster_path ? `${prefixs}${m?.poster_path}` : ErrorImage
+                }
                 alt="Movie"
                 className="rounded-2xl border-2 border-red-200 "
               />

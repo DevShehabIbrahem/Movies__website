@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { grid, prefixs } from "../../common/styles";
 import { selectStatus } from "../../Redux/Reducers/Genres";
 import { useTypedSelector } from "../../Redux/store";
+import Errorimag from "../../assets/Error.jpg";
 
 const GenresMovies = () => {
   const state = useTypedSelector(selectStatus);
@@ -23,7 +24,7 @@ const GenresMovies = () => {
               </span>
 
               <img
-                src={`${prefixs}${m?.poster_path}`}
+                src={m?.poster_path ? `${prefixs}${m?.poster_path}` : Errorimag}
                 alt="Movie"
                 className="rounded-2xl border-2 border-red-200 "
               />

@@ -6,6 +6,7 @@ import useFetchMovies from "../hooks/useFetchMovies";
 import { AiFillStar } from "react-icons/ai";
 import { Navigation } from "swiper";
 import { flex, grid, prefixs } from "./styles";
+import ErrorImg from "../assets/Error.jpg";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -73,7 +74,11 @@ const Row = ({
                     </span>
 
                     <img
-                      src={`${prefixs}${m?.poster_path}`}
+                      src={
+                        m?.poster_path
+                          ? `${prefixs}${m?.poster_path}`
+                          : ErrorImg
+                      }
                       alt="Movie"
                       className="rounded-2xl border-2 border-red-200 "
                     />

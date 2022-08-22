@@ -10,7 +10,7 @@ import {
 import { useTypedSelector } from "../Redux/store";
 import { useAppDispatch } from "../Redux/hook";
 import { prefixs } from "../common/styles";
-
+import Errorimage from "../assets/Error.jpg";
 const MoviesDetails: FC = () => {
   const { id } = useParams();
 
@@ -55,7 +55,11 @@ const MoviesDetails: FC = () => {
         />
         <div className="relative top-28 left-3 md:left-10 ">
           <img
-            src={`${prefixs}${MoviesDetails?.poster_path}`}
+            src={
+              MoviesDetails?.poster_path
+                ? `${prefixs}${MoviesDetails?.poster_path}`
+                : Errorimage
+            }
             alt="poster"
             className="w-[12rem] z-50 rounded-2xl"
           />

@@ -6,8 +6,7 @@ import { AiFillStar } from "react-icons/ai";
 
 import useRandomTrinding from "../hooks/useRandomTrinding";
 import { prefixs } from "./styles";
-
-import { FC } from "react";
+import ErrorImg from "../assets/Error.jpg";
 
 interface data {
   image?: HTMLImageElement;
@@ -23,16 +22,20 @@ const RowSidebar = ({
 
   return (
     <>
-      <h3 className=" border-l-4 border-[#ccc] mb-2 mt-10 uppercase text-[1.3rem] font-bold">
+      <h3 className="border-l-4 border-[#ccc] mb-2 mt-10 uppercase text-[1.3rem] font-bold">
         <p className="pl-1"> {title}</p>
       </h3>
       <div className="flex justify-center items-center opacity-[0.8] hover:opacity-[1] duration-300 transition-all ">
         <Link to={`/movie/${trinding?.id}`} key={trinding?.id} className="flex">
           <div className=" overflow-hidden  mt-5 w-[50%]">
             <img
-              src={`${prefixs}${trinding?.poster_path}`}
+              src={
+                trinding?.poster_path
+                  ? `${prefixs}${trinding?.poster_path}`
+                  : ErrorImg
+              }
               alt="Movie"
-              className="rounded-2xl border-2 border-red-200 w-full  "
+              className="rounded-2xl border-2 border-red-200 w-full h-full  "
             />
           </div>
 
