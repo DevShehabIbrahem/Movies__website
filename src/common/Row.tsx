@@ -82,6 +82,7 @@ const Row = ({
                       alt="Movie"
                       className="rounded-2xl border-2 border-red-200 "
                     />
+
                     <span className="text-[1.2rem] text-center pt-2 flex items-center justify-center font-bold">
                       {m?.original_title}
                     </span>
