@@ -3,10 +3,10 @@ import { ChangeEvent, useEffect, useState } from "react";
 import { IoIosSearch } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
 import Request from "../../API/Requests ";
-import RowSidebar from "../../common/RowSidebar";
+import RowSidebar from "../../common/shared/RowSidebar";
 import { useAppDispatch } from "../../Redux/hook";
 import { SearchMovies } from "../../Redux/Reducers/SearchSlice";
-import Select from "../../common/Select";
+import Select from "../../common/shared/Select";
 
 const Sidebar = () => {
   const [term, setTerm] = useState<string>("");

@@ -1,5 +1,5 @@
 import { Component } from "react";
-import Row from "../common/Row";
+import Row from "../common/shared/Row";
 import Request from "../API/Requests ";
 
 class Tvmovies extends Component {

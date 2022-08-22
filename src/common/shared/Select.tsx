@@ -7,9 +7,9 @@ import {
   useState,
 } from "react";
 import { useNavigate } from "react-router-dom";
-import { useAppDispatch } from "../Redux/hook";
-import { Fetchgenres } from "../Redux/Reducers/Genres";
-import { fetchGenres } from "./utitly";
+import { useAppDispatch } from "../../Redux/hook";
+import { Fetchgenres } from "../../Redux/Reducers/Genres";
+import { fetchGenres } from "../utitly";
 
 const Select = () => {
   const dispatch = useAppDispatch();

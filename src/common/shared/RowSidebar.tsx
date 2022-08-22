@@ -4,9 +4,10 @@ import { Link } from "react-router-dom";
 
 import { AiFillStar } from "react-icons/ai";
 
-import useRandomTrinding from "../hooks/useRandomTrinding";
-import { prefixs } from "./styles";
-import ErrorImg from "../assets/Error.jpg";
+import useRandomTrinding from "../../hooks/useRandomTrinding";
+import { prefixs } from "../styles";
+import ErrorImg from "../../assets/Error.jpg";
+import MyImage from "./MyImage";
 
 const RowSidebar = ({
   Reguest,
@@ -25,14 +26,14 @@ const RowSidebar = ({
       <div className="flex justify-center items-center opacity-[0.8] hover:opacity-[1] duration-300 transition-all ">
         <Link to={`/movie/${trinding?.id}`} key={trinding?.id} className="flex">
           <div className=" overflow-hidden  mt-5 w-[50%]">
-            <img
+            <MyImage
               src={
                 trinding?.poster_path
                   ? `${prefixs}${trinding?.poster_path}`
                   : ErrorImg
               }
               alt="Movie"
-              className="rounded-2xl border-2 border-red-200 w-full h-full  "
+              className="rounded-2xl border-2 border-red-200 "
             />
           </div>
 

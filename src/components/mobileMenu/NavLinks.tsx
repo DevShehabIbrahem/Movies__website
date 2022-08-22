@@ -1,6 +1,6 @@
 import { Dispatch, SetStateAction } from "react";
 import { NavLink } from "react-router-dom";
-import Select from "../../common/Select";
+import Select from "../../common/shared/Select";
 import { isActiveStyle, isNotActiveStyle } from "../../common/styles";
 import { words } from "../../common/words";
 import { useAppDispatch } from "../../Redux/hook";

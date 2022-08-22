@@ -2,7 +2,7 @@ import { FC } from "react";
 
 import Herosection from "../components/Herosection/Herosection";
 
-import Row from "../common/Row";
+import Row from "../common/shared/Row";
 import Request from "../API/Requests ";
 import Sidebar from "../components/sidebar/Sidebar";
 

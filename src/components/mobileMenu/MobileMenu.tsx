@@ -2,7 +2,7 @@ import NavLinks from "./NavLinks";
 import "./MobileMenu.scss";
 import { AiOutlineClose } from "react-icons/ai";
 import { Dispatch, SetStateAction } from "react";
-import Select from "../../common/Select";
+import Select from "../../common/shared/Select";
 import { MenuChange } from "../../Redux/Reducers/CloseMenu";
 import { useAppDispatch } from "../../Redux/hook";
 

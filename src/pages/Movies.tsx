@@ -1,4 +1,4 @@
-import Row from "../common/Row";
+import Row from "../common/shared/Row";
 import Request from "../API/Requests ";
 
 import { Component } from "react";

@@ -9,6 +9,7 @@ import { IoIosSearch } from "react-icons/io";
 import { AiFillStar } from "react-icons/ai";
 import { grid, prefixs } from "../common/styles";
 import ErrorImage from "../assets/Error.jpg";
+import MyImage from "../common/shared/MyImage";
 const Search = () => {
   const [term, setTerm] = useState<string>("");
 
@@ -50,12 +51,11 @@ const Search = () => {
             className="opacity-[0.8] hover:opacity-[1] duration-300 transition-all"
           >
             <div className="relative overflow-hidden md:hover:scale-105 p-2 delay-300 transition-all ">
-              <span className="flex items-center gap-2 bg-red-600 text-white text-[1rem] px-3 absolute top-3 right-5 rounded-[100px]">
+              <span className="flex items-center gap-2 bg-red-600 text-white text-[1rem] px-3 absolute top-3 right-5 rounded-[100px] z-10">
                 {m?.vote_average}
                 <AiFillStar />
               </span>
-
-              <img
+              <MyImage
                 src={
                   m?.poster_path ? `${prefixs}${m?.poster_path}` : ErrorImage
                 }

@@ -2,14 +2,15 @@ import { Link } from "react-router-dom";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import useFetchMovies from "../hooks/useFetchMovies";
+import useFetchMovies from "../../hooks/useFetchMovies";
 import { AiFillStar } from "react-icons/ai";
 import { Navigation } from "swiper";
-import { flex, grid, prefixs } from "./styles";
-import ErrorImg from "../assets/Error.jpg";
+import { flex, grid, prefixs } from "../styles";
+import ErrorImg from "../../assets/Error.jpg";
 
 import "swiper/css";
 import "swiper/css/navigation";
+import MyImage from "./MyImage";
 
 const Row = ({
   Reguest,
@@ -68,12 +69,11 @@ const Row = ({
                   className="opacity-[0.8] hover:opacity-[1] duration-300 transition-all"
                 >
                   <div className="relative overflow-hidden md:hover:scale-105 p-2 delay-300 transition-all ">
-                    <span className="flex items-center gap-2 bg-red-600 text-white text-[1rem] px-3 absolute top-3 right-5 rounded-[100px]">
+                    <span className="flex items-center gap-2 bg-red-600 text-white text-[1rem] px-3 absolute top-3 right-5 rounded-[100px] z-10">
                       {m?.vote_average}
                       <AiFillStar />
                     </span>
-
-                    <img
+                    <MyImage
                       src={
                         m?.poster_path
                           ? `${prefixs}${m?.poster_path}`
@@ -105,8 +105,10 @@ const Row = ({
                     <AiFillStar />
                   </span>
 
-                  <img
-                    src={`${prefixs}${m?.poster_path}`}
+                  <MyImage
+                    src={
+                      m?.poster_path ? `${prefixs}${m?.poster_path}` : ErrorImg
+                    }
                     alt="Movie"
                     className="rounded-2xl border-2 border-red-200 "
                   />

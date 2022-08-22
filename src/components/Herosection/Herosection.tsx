@@ -1,4 +1,6 @@
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import { useNavigate } from "react-router-dom";
+import MyImage from "../../common/shared/MyImage";
 import usecutWords from "../../hooks/usecutWords";
 import useRandomBanner from "../../hooks/useRandomBanner";
 const Herosection = () => {
