@@ -20,6 +20,7 @@ The Movie Database API
 - React-Router-Dom
 - Hooks And Class Component
 - Scss
+- LazyLoadImage
 
 ## Features
 
